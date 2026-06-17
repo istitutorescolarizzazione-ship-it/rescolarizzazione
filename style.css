@@ -280,6 +280,16 @@ details {
   z-index: 2;
 }
 
+.points li::after {
+  content: attr(data-icon);
+  position: absolute;
+  right: 30px;
+  top: 34px;
+  font-size: 3rem;
+  color: var(--accent);
+  filter: grayscale(1) sepia(1) saturate(5) hue-rotate(320deg);
+}
+
 .points li::before {
   background: #ffffff;
 }

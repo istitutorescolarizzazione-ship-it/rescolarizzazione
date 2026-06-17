@@ -293,31 +293,58 @@ details {
 }
 
 .points li::after {
+  content: "";
   position: absolute;
   right: 28px;
-  top: 26px;
-  width: 54px;
-  height: 54px;
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  display: grid;
-  place-items: center;
-  font-size: 1.7rem;
-  font-weight: 900;
-  line-height: 1;
+  top: 28px;
+  width: 64px;
+  height: 64px;
+  background-color: var(--accent);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.95;
 }
 
-/* iconcine finte, volutamente ridicole */
-.points li[data-icon="megaphone"]::after { content: "▶"; }
-.points li[data-icon="document"]::after { content: "▤"; }
-.points li[data-icon="book"]::after { content: "▯"; }
-.points li[data-icon="temple"]::after { content: "▥"; }
-.points li[data-icon="handshake"]::after { content: "↔"; }
-.points li[data-icon="piggy"]::after { content: "€"; }
-.points li[data-icon="alert"]::after { content: "!"; }
-.points li[data-icon="brain"]::after { content: "◎"; }
-.points li[data-icon="bulb"]::after { content: "✦"; }
-.points li[data-icon="scale"]::after { content: "⚖"; }
+.points li[data-icon="megaphone"]::after {
+  mask: url("https://api.iconify.design/lucide/megaphone.svg") center / contain no-repeat;
+}
+
+.points li[data-icon="document"]::after {
+  mask: url("https://api.iconify.design/lucide/file-text.svg") center / contain no-repeat;
+}
+
+.points li[data-icon="book"]::after {
+  mask: url("https://api.iconify.design/lucide/book-open.svg") center / contain no-repeat;
+}
+
+.points li[data-icon="temple"]::after {
+  mask: url("https://api.iconify.design/lucide/landmark.svg") center / contain no-repeat;
+}
+
+.points li[data-icon="handshake"]::after {
+  mask: url("https://api.iconify.design/lucide/handshake.svg") center / contain no-repeat;
+}
+
+.points li[data-icon="piggy"]::after {
+  mask: url("https://api.iconify.design/lucide/piggy-bank.svg") center / contain no-repeat;
+}
+
+.points li[data-icon="alert"]::after {
+  mask: url("https://api.iconify.design/lucide/triangle-alert.svg") center / contain no-repeat;
+}
+
+.points li[data-icon="brain"]::after {
+  mask: url("https://api.iconify.design/lucide/brain.svg") center / contain no-repeat;
+}
+
+.points li[data-icon="bulb"]::after {
+  mask: url("https://api.iconify.design/lucide/lightbulb.svg") center / contain no-repeat;
+}
+
+.points li[data-icon="scale"]::after {
+  mask: url("https://api.iconify.design/lucide/scale.svg") center / contain no-repeat;
+}
 
 /* TEST */
 

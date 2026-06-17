@@ -23,11 +23,8 @@ body {
   color: var(--ink);
 }
 
-.hero {
-  min-height: 86vh;
-  background:
-    radial-gradient(circle at top right, rgba(181, 29, 26, .16), transparent 34%),
-    linear-gradient(135deg, #fffaf1 0%, #efe1cc 100%);
+.site-header {
+  background: var(--paper);
   border-bottom: 5px solid var(--line);
 }
 
@@ -239,4 +236,30 @@ footer {
   h1 {
     font-size: 3.4rem;
   }
+}
+
+.page {
+  display: none;
+}
+
+.page.active-page {
+  display: block;
+}
+
+.site-header {
+  background: var(--paper);
+  border-bottom: 5px solid var(--line);
+}
+
+.brand {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+#home {
+  min-height: 86vh;
+  padding-top: 1px;
+  background:
+    radial-gradient(circle at top right, rgba(181, 29, 26, .16), transparent 34%),
+    linear-gradient(135deg, #fffaf1 0%, #efe1cc 100%);
 }

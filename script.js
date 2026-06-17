@@ -98,67 +98,95 @@ if (button && result) {
     );
 
     if (texts.length === 0) {
-      result.textContent =
-        "Diagnosi preliminare: nessuna criticità rilevata. Il soggetto mostra capacità residue di dubbio, lettura e convivenza con la complessità.";
+      result.innerHTML =
+        "<strong>Diagnosi preliminare:</strong> nessuna criticità rilevata.<br><br>" +
+        "Il soggetto mostra capacità residue di dubbio, lettura e convivenza con la complessità. " +
+        "Non si esclude, tuttavia, una forma latente di buonsenso verificabile solo dopo esposizione a un post politico su Facebook.";
       return;
     }
 
-    let modules = [];
+    let specifiche = [];
 
     if (hasStudy) {
-      modules.push("comprensione del testo e alfabetizzazione minima");
+      specifiche.push(
+        "<strong>Area studio:</strong> sospetta allergia al testo scritto. " +
+        "Il soggetto tende a formulare opinioni definitive prima dell'apertura del documento."
+      );
     }
 
     if (hasEurope) {
-      modules.push("comparazioni internazionali non inventate");
+      specifiche.push(
+        "<strong>Area comparazioni europee:</strong> citazionismo geografico non assistito. " +
+        "Prescrizione: leggere almeno una fonte primaria prima di usare “in Europa lo fanno”."
+      );
     }
 
     if (hasEasy) {
-      modules.push("fenomeni complessi e soluzioni non magiche");
+      specifiche.push(
+        "<strong>Area semplificazione:</strong> sindrome da soluzione unica. " +
+        "Il soggetto manifesta fiducia eccessiva in misure drastiche, preferibilmente applicabili ad altri."
+      );
     }
 
     if (hasRacism) {
-      modules.push("storia, antropologia e panico identitario");
+      specifiche.push(
+        "<strong>Area panico identitario:</strong> possibile razzismo in modalità “ma”. " +
+        "Si rileva tendenza a confondere persone reali, religioni, cittadinanza e fantasie di sostituzione."
+      );
     }
 
     if (hasWomen) {
-      modules.push("pari opportunità e diritti non sottrattivi");
+      specifiche.push(
+        "<strong>Area misoginia:</strong> disagio lieve/moderato davanti all'autonomia femminile. " +
+        "Il soggetto potrebbe percepire i diritti delle donne come un attacco personale alla quiete del divano."
+      );
     }
 
     if (hasQueer) {
-      modules.push("diritti civili e sindrome da “non ho niente contro, ma…”");
+      specifiche.push(
+        "<strong>Area queer/Pride:</strong> sindrome da “ho amici gay, ma”. " +
+        "Il soggetto sembra tollerare l'esistenza LGBT+ purché invisibile, silenziosa e possibilmente non colorata."
+      );
     }
 
     if (hasConspiracy) {
-      modules.push("igiene delle fonti e disintossicazione da bacheca indignata");
+      specifiche.push(
+        "<strong>Area complotto social:</strong> intossicazione da bacheca indignata. " +
+        "Probabile esposizione prolungata a contenuti con molte maiuscole, poche fonti e musica epica."
+      );
     }
 
     if (hasNostalgia) {
-      modules.push("educazione al presente e gestione del lutto per il passato immaginario");
+      specifiche.push(
+        "<strong>Area nostalgia selettiva:</strong> idealizzazione del passato immaginario. " +
+        "Il soggetto ricorda un'epoca ordinata, semplice e probabilmente mai esistita."
+      );
     }
 
-    let intro = "";
+    let diagnosi = "";
 
     if (texts.length <= 2) {
-      intro =
-        "Diagnosi preliminare: lieve esposizione a slogan semplificatori. Il soggetto è recuperabile con poche ore di lettura assistita e una temporanea sospensione dai commenti.";
+      diagnosi =
+        "<strong>Diagnosi preliminare:</strong> esposizione lieve a slogan semplificatori. " +
+        "Il soggetto è recuperabile con letture brevi, pause prima dell'invio e due bicchieri d'acqua.";
     } else if (texts.length <= 5) {
-      intro =
-        "Diagnosi preliminare: rescolarizzazione consigliata. Si rileva tendenza a sostituire l'analisi con frasi da bar travestite da geopolitica.";
+      diagnosi =
+        "<strong>Diagnosi preliminare:</strong> rescolarizzazione consigliata. " +
+        "Si osserva tendenza a sostituire l'analisi con frasi da bar travestite da geopolitica.";
     } else if (texts.length <= 9) {
-      intro =
-        "Diagnosi preliminare: rescolarizzazione intensiva. Il soggetto manifesta accumulo significativo di slogan, panico morale e fiducia eccessiva nel proprio buonsenso.";
+      diagnosi =
+        "<strong>Diagnosi preliminare:</strong> rescolarizzazione intensiva. " +
+        "Il soggetto presenta accumulo significativo di slogan, panico morale e fiducia eccessiva nel proprio buonsenso.";
     } else {
-      intro =
-        "Diagnosi preliminare: emergenza educativa nazionale. Attivare immediatamente protocollo completo: storia, diritto, antropologia, fonti verificate e silenzio operativo prima dell'invio.";
+      diagnosi =
+        "<strong>Diagnosi preliminare:</strong> emergenza educativa nazionale. " +
+        "Attivare immediatamente protocollo completo: storia, diritto, antropologia, fonti verificate e silenzio operativo prima dell'invio.";
     }
 
-    const uniqueModules = [...new Set(modules)];
-
     result.innerHTML =
-      intro +
-      "<br><br><strong>Moduli consigliati:</strong><br>" +
-      uniqueModules.map(x => "• " + x).join("<br>");
+      diagnosi +
+      "<br><br><strong>Specifiche rilevate:</strong><br>" +
+      specifiche.map(x => "• " + x).join("<br><br>");
   });
 }
 

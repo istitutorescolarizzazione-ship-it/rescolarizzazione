@@ -7,127 +7,229 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
+
+  <header class="site-header">
     <nav>
-      <div class="brand">
+      <a class="brand" href="#home" data-page="home">
         <div class="logo">RE</div>
         <span>SCOLARIZZAZIONE</span>
-      </div>
+      </a>
+
       <div class="links">
-        <a href="#manifesto">Manifesto</a>
-        <a href="#test">Test</a>
-        <a href="#programmi">Programmi</a>
-        <a href="#faq">FAQ</a>
+        <a href="#home" data-page="home">Home</a>
+        <a href="#manifesto" data-page="manifesto">Manifesto</a>
+        <a href="#proposta" data-page="proposta">Proposta</a>
+        <a href="#test" data-page="test">Test</a>
+        <a href="#programmi" data-page="programmi">Programmi</a>
+        <a href="#faq" data-page="faq">FAQ</a>
       </div>
     </nav>
-
-    <section class="hero-content">
-      <p class="eyebrow">Piano nazionale per il recupero delle competenze civiche fondamentali</p>
-      <h1>Prima di semplificare il mondo, proviamo a studiarlo.</h1>
-      <p class="lead">
-        Rescolarizzazione è un progetto satirico dedicato a chi affronta fenomeni complessi
-        con soluzioni da commento Facebook.
-      </p>
-      <div class="cta-row">
-        <a class="button primary" href="#test">Fai il test diagnostico</a>
-        <a class="button secondary" href="#manifesto">Leggi il manifesto</a>
-      </div>
-    </section>
   </header>
 
   <main>
-    <section class="panel intro">
-      <h2>Cos'è la Rescolarizzazione?</h2>
-      <p>
-        È un percorso immaginario, urgente e assolutamente necessario per recuperare nozioni
-        base di storia, diritto, economia, geografia, antropologia e comprensione del testo.
-      </p>
-      <p>
-        Nasce per rispondere a sintomi sempre più diffusi: slogan al posto delle fonti,
-        “buonsenso” al posto dell’argomentazione, e la convinzione che ogni problema sociale
-        possa essere risolto mandando via qualcuno.
-      </p>
-    </section>
 
-    <section id="manifesto" class="panel">
-      <h2>Manifesto in 10 punti</h2>
-      <ol class="manifesto">
-        <li>Ripasso della Costituzione, con particolare attenzione alla parola “diritti”.</li>
-        <li>Corso base di storia contemporanea: cosa è già successo quando qualcuno voleva “ripulire” una nazione.</li>
-        <li>Introduzione al diritto internazionale: gli Stati non sono chat di condominio.</li>
-        <li>Economia del lavoro: scoprire che le persone non sono pacchi da spostare.</li>
-        <li>Geografia politica per chi usa “a casa loro” come se fosse un indirizzo.</li>
-        <li>Antropologia per principianti: cultura, etnia e cittadinanza non sono sinonimi.</li>
-        <li>Comprensione del testo: leggere prima di indignarsi.</li>
-        <li>Educazione alle fonti: “l’ho visto su Telegram” non è bibliografia.</li>
-        <li>Laboratorio “problemi complessi e soluzioni non magiche”.</li>
-        <li>Esame finale: proporre una soluzione senza usare la parola “espulsione”.</li>
-      </ol>
-    </section>
+    <!-- HOME -->
+    <section id="home" class="page active-page">
+      <div class="hero-content">
+        <p class="eyebrow">Piano nazionale per il recupero delle competenze civiche fondamentali</p>
+        <h1>Prima di semplificare il mondo, proviamo a studiarlo.</h1>
+        <p class="lead">
+          Rescolarizzazione è un progetto satirico dedicato a chi affronta fenomeni complessi
+          con soluzioni da commento social.
+        </p>
 
-    <section id="test" class="panel accent">
-      <h2>Test diagnostico preliminare</h2>
-      <p>Hai mai pronunciato, scritto o pensato una delle seguenti frasi?</p>
-
-      <div class="quiz">
-        <label><input type="checkbox"> “È semplice.”</label>
-        <label><input type="checkbox"> “Basta mandarli via tutti.”</label>
-        <label><input type="checkbox"> “Lo fanno anche in Danimarca.”</label>
-        <label><input type="checkbox"> “Non serve studiare, basta il buonsenso.”</label>
-        <label><input type="checkbox"> “Prima gli italiani, poi vediamo.”</label>
-        <label><input type="checkbox"> “Non sono razzista, però…”</label>
+        <div class="cta-row">
+          <a class="button primary" href="#test" data-page="test">Fai il test diagnostico</a>
+          <a class="button secondary" href="#manifesto" data-page="manifesto">Leggi il manifesto</a>
+        </div>
       </div>
 
-      <button id="calc" class="button primary">Calcola livello</button>
-      <div id="result" class="result">Seleziona le risposte e avvia la diagnosi.</div>
+      <section class="panel intro">
+        <h2>Cos'è la Rescolarizzazione?</h2>
+        <p>
+          È un percorso immaginario, urgente e assolutamente necessario per recuperare nozioni
+          base di storia, diritto, economia, geografia, antropologia e comprensione del testo.
+        </p>
+        <p>
+          Nasce per rispondere a sintomi sempre più diffusi: slogan al posto delle fonti,
+          “buonsenso” al posto dell’argomentazione, e la convinzione che ogni problema sociale
+          possa essere risolto mandando via qualcuno.
+        </p>
+      </section>
     </section>
 
-    <section id="programmi" class="panel">
-      <h2>Programmi di recupero</h2>
-      <div class="cards">
-        <article>
-          <h3>Modulo 1 · Fonti e realtà</h3>
-          <p>Distinguere un dato da uno slogan, una notizia da un meme, una legge da un titolo urlato.</p>
-        </article>
-        <article>
-          <h3>Modulo 2 · Cittadinanza</h3>
-          <p>Capire perché una persona nata o residente in un paese non evapora per decreto.</p>
-        </article>
-        <article>
-          <h3>Modulo 3 · Fenomeni complessi</h3>
-          <p>Allenamento intensivo contro la tentazione di risolvere tutto con una ruspa metaforica.</p>
-        </article>
-      </div>
+    <!-- MANIFESTO -->
+    <section id="manifesto" class="page">
+      <section class="panel">
+        <h2>Manifesto in 10 punti</h2>
+
+        <ol class="manifesto">
+          <li>Ripasso della Costituzione, con particolare attenzione alla parola “diritti”.</li>
+          <li>Corso base di storia contemporanea: cosa è già successo quando qualcuno voleva “ripulire” una nazione.</li>
+          <li>Introduzione al diritto internazionale: gli Stati non sono chat di condominio.</li>
+          <li>Economia del lavoro: scoprire che le persone non sono pacchi da spostare.</li>
+          <li>Geografia politica per chi usa “a casa loro” come se fosse un indirizzo.</li>
+          <li>Antropologia per principianti: cultura, etnia e cittadinanza non sono sinonimi.</li>
+          <li>Comprensione del testo: leggere prima di indignarsi.</li>
+          <li>Educazione alle fonti: “l’ho visto su Telegram” non è bibliografia.</li>
+          <li>Laboratorio “problemi complessi e soluzioni non magiche”.</li>
+          <li>Esame finale: proporre una soluzione senza usare la parola “espulsione”.</li>
+        </ol>
+      </section>
     </section>
 
-    <section id="faq" class="panel">
-      <h2>FAQ</h2>
-      <details>
-        <summary>La Rescolarizzazione è obbligatoria?</summary>
-        <p>No. Ma in alcuni casi sarebbe fortemente consigliata dal buon senso, quello vero.</p>
-      </details>
-      <details>
-        <summary>Serve un titolo di studio?</summary>
-        <p>No. Serve solo la disponibilità a scoprire che il mondo non entra tutto in uno slogan.</p>
-      </details>
-      <details>
-        <summary>Posso iscrivermi se cito la Danimarca a sproposito?</summary>
-        <p>Sì. Abbiamo un modulo specifico: “Comparazioni internazionali senza cherry picking”.</p>
-      </details>
+    <!-- PROPOSTA -->
+    <section id="proposta" class="page">
+      <section class="panel">
+        <p class="eyebrow">Piano straordinario</p>
+        <h2>La proposta</h2>
+        <p class="lead">
+          I dieci punti del nostro programma per la Rescolarizzazione:
+          un piano satirico per il recupero delle competenze civiche fondamentali.
+        </p>
+
+        <ol class="points">
+          <li>
+            <strong>Controllo dei flussi di slogan</strong><br>
+            Potenziamento degli strumenti educativi finalizzati a distinguere tra opinioni,
+            fatti verificabili e frasi urlate nei commenti.
+          </li>
+
+          <li>
+            <strong>Confisca simbolica delle fonti farlocche</strong><br>
+            Contrasto alla diffusione di contenuti manipolati, titoli letti a metà,
+            screenshot senza contesto e catene WhatsApp travestite da analisi geopolitica.
+          </li>
+
+          <li>
+            <strong>Recupero educativo degli irregolari grammaticali e di chi commette reati logici</strong><br>
+            Percorsi obbligatori di comprensione del testo per chi confonde correlazione e causalità,
+            diritto e vendetta, cittadinanza ed etnia.
+          </li>
+
+          <li>
+            <strong>Istituto della Rescolarizzazione</strong><br>
+            Introduzione dell’Istituto della Rescolarizzazione quale strumento di governo
+            dell’emergenza educativa nazionale.
+          </li>
+
+          <li>
+            <strong>Patto di Rescolarizzazione Volontaria</strong><br>
+            Accordo tra società civile e singolo commentatore, a fronte della rinuncia definitiva
+            alla frase “non sono razzista, però”.
+          </li>
+
+          <li>
+            <strong>Fondo Nazionale per la Rescolarizzazione</strong><br>
+            Fondo immaginario alimentato dai risparmi derivanti dalla drastica riduzione
+            delle discussioni inutili online.
+          </li>
+
+          <li>
+            <strong>Stop alle ONG del panico morale</strong><br>
+            Contrasto al traffico incontrollato di bufale, paure, indignazione e semplificazioni.
+          </li>
+
+          <li>
+            <strong>Abolizione del Decreto Frasi Fatte e ritorno del pensiero critico</strong><br>
+            Eliminazione dell’importazione massiva di formule preconfezionate da talk show,
+            comizi e bacheche nostalgiche.
+          </li>
+
+          <li>
+            <strong>Fondo per la Natalità delle Idee Decenti</strong><br>
+            Sostegno alla nascita di idee argomentate, informate e compatibili con lo stato di diritto.
+          </li>
+
+          <li>
+            <strong>Case, asili nido e realtà: nuovi criteri di comprensione</strong><br>
+            Accesso al dibattito pubblico subordinato a lettura integrale dei testi,
+            conoscenza minima dei diritti fondamentali e capacità di distinguere una persona
+            da un problema amministrativo.
+          </li>
+        </ol>
+      </section>
     </section>
 
-    <section class="panel disclaimer">
-      <h2>Nota satirica</h2>
-      <p>
-        Questo sito è una bozza satirica e di critica politica. Non è affiliato, collegato o riconducibile
-        ad alcuna organizzazione reale. Ogni riferimento a slogan, linguaggi o fenomeni politici è usato
-        a fini di parodia, commento e critica.
-      </p>
-      <p>
-        Bersaglio della satira: idee semplificatrici, slogan disumanizzanti e proposte politiche trattate
-        come se fossero soluzioni magiche. Non persone private.
-      </p>
+    <!-- TEST -->
+    <section id="test" class="page">
+      <section class="panel accent">
+        <h2>Test diagnostico preliminare</h2>
+        <p>Hai mai pronunciato, scritto o pensato una delle seguenti frasi?</p>
+
+        <div class="quiz">
+          <label><input type="checkbox"> “È semplice.”</label>
+          <label><input type="checkbox"> “Basta mandarli via tutti.”</label>
+          <label><input type="checkbox"> “Lo fanno anche in Danimarca.”</label>
+          <label><input type="checkbox"> “Non serve studiare, basta il buonsenso.”</label>
+          <label><input type="checkbox"> “Prima gli italiani, poi vediamo.”</label>
+          <label><input type="checkbox"> “Non sono razzista, però…”</label>
+        </div>
+
+        <button id="calc" class="button primary">Calcola livello</button>
+        <div id="result" class="result">Seleziona le risposte e avvia la diagnosi.</div>
+      </section>
     </section>
+
+    <!-- PROGRAMMI -->
+    <section id="programmi" class="page">
+      <section class="panel">
+        <h2>Programmi di recupero</h2>
+
+        <div class="cards">
+          <article>
+            <h3>Modulo 1 · Fonti e realtà</h3>
+            <p>Distinguere un dato da uno slogan, una notizia da un meme, una legge da un titolo urlato.</p>
+          </article>
+
+          <article>
+            <h3>Modulo 2 · Cittadinanza</h3>
+            <p>Capire perché una persona nata o residente in un paese non evapora per decreto.</p>
+          </article>
+
+          <article>
+            <h3>Modulo 3 · Fenomeni complessi</h3>
+            <p>Allenamento intensivo contro la tentazione di risolvere tutto con una ruspa metaforica.</p>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="page">
+      <section class="panel">
+        <h2>FAQ</h2>
+
+        <details>
+          <summary>La Rescolarizzazione è obbligatoria?</summary>
+          <p>No. Ma in alcuni casi sarebbe fortemente consigliata dal buon senso, quello vero.</p>
+        </details>
+
+        <details>
+          <summary>Serve un titolo di studio?</summary>
+          <p>No. Serve solo la disponibilità a scoprire che il mondo non entra tutto in uno slogan.</p>
+        </details>
+
+        <details>
+          <summary>Posso iscrivermi se cito la Danimarca a sproposito?</summary>
+          <p>Sì. Abbiamo un modulo specifico: “Comparazioni internazionali senza cherry picking”.</p>
+        </details>
+      </section>
+
+      <section class="panel disclaimer">
+        <h2>Nota satirica</h2>
+        <p>
+          Questo sito è una bozza satirica e di critica politica. Non è affiliato, collegato o riconducibile
+          ad alcuna organizzazione reale. Ogni riferimento a slogan, linguaggi o fenomeni politici è usato
+          a fini di parodia, commento e critica.
+        </p>
+        <p>
+          Bersaglio della satira: idee semplificatrici, slogan disumanizzanti e proposte politiche trattate
+          come se fossero soluzioni magiche. Non persone private.
+        </p>
+      </section>
+    </section>
+
   </main>
 
   <footer>

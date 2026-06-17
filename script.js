@@ -3,30 +3,46 @@ document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll("[data-page]");
   const pages = document.querySelectorAll(".page");
 
-  function showPage(pageId) {
+  function showPage(pageId, updateUrl = true) {
     pages.forEach(page => page.classList.remove("active-page"));
 
     const page = document.getElementById(pageId);
+
     if (page) {
       page.classList.add("active-page");
       window.scrollTo(0, 0);
+
+      if (updateUrl) {
+        history.pushState(null, "", "#" + pageId);
+      }
     }
   }
 
   links.forEach(link => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
+
       const pageId = this.getAttribute("data-page");
       showPage(pageId);
-      history.pushState(null, "", "#" + pageId);
     });
   });
 
+  window.addEventListener("popstate", function () {
+    const pageId = location.hash.replace("#", "") || "home";
+
+    if (document.getElementById(pageId)) {
+      showPage(pageId, false);
+    } else {
+      showPage("home", false);
+    }
+  });
+
   const initialPage = location.hash.replace("#", "");
+
   if (initialPage && document.getElementById(initialPage)) {
-    showPage(initialPage);
+    showPage(initialPage, false);
   } else {
-    showPage("home");
+    showPage("home", false);
   }
 
   const button = document.getElementById("calc");

@@ -384,28 +384,58 @@ details {
 
 /* PROGRAMMI */
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  margin-top: 42px;
+.programs-accordion {
+  margin-top: 54px;
+  max-width: 950px;
 }
 
-.cards article {
-  border-top: 5px solid var(--accent);
-  background: #fafafa;
-  padding: 28px;
+.program-module {
+  border-top: 1px solid var(--line);
+  padding: 0;
 }
 
-.cards h3 {
-  margin: 0 0 14px;
-  font-size: 1.35rem;
+.program-module:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.program-module summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 28px 0;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 950;
   text-transform: uppercase;
+  color: var(--ink);
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
 }
 
-.cards p {
+.program-module summary::-webkit-details-marker {
+  display: none;
+}
+
+.program-module summary::after {
+  content: "+";
+  color: var(--accent);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.program-module[open] summary::after {
+  content: "−";
+}
+
+.program-module ul {
+  margin: 0 0 34px 0;
+  padding: 0 0 0 28px;
   color: var(--muted);
-  line-height: 1.6;
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+.program-module li {
+  margin: 6px 0;
 }
 
 /* FAQ */

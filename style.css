@@ -218,9 +218,20 @@ summary {
 }
 
 footer {
-  text-align: center;
-  padding: 40px;
-  color: var(--muted);
+    margin-top: 60px;
+    border-top: 3px solid var(--line);
+    background: #eee6d7;
+    text-align: center;
+    padding: 30px;
+    color: var(--muted);
+}
+
+.footer-disclaimer {
+    max-width: 900px;
+    margin: 20px auto 0 auto;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #6b655e;
 }
 
 @media (max-width: 760px) {

@@ -236,30 +236,31 @@ details {
 .points {
   list-style: none;
   padding: 0;
-  margin: 70px 0 0;
+  margin: 52px 0 0;
   counter-reset: item;
   position: relative;
+  max-width: 1050px;
 }
 
 .points::before {
   content: "";
   position: absolute;
-  left: 61px;
-  top: 40px;
-  bottom: 80px;
-  width: 3px;
-  background: var(--line);
+  left: 46px;
+  top: 34px;
+  bottom: 64px;
+  width: 2px;
+  background: #d6d6d6;
 }
 
 .points li {
   counter-increment: item;
   position: relative;
-  min-height: 150px;
-  padding: 10px 0 58px 170px;
-  border-bottom: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 1.22rem;
-  line-height: 1.65;
+  min-height: 128px;
+  padding: 0 120px 42px 138px;
+  border-bottom: 1px solid #e4e4e4;
+  color: #666;
+  font-size: 1.08rem;
+  line-height: 1.55;
 }
 
 .points li::before {
@@ -267,42 +268,56 @@ details {
   position: absolute;
   left: 0;
   top: 0;
-  width: 122px;
-  height: 122px;
-  border: 3px solid var(--line);
+  width: 92px;
+  height: 92px;
+  border: 3px solid #d7d7d7;
   border-radius: 50%;
-  background: white;
+  background: #fff;
   color: var(--accent);
   display: grid;
   place-items: center;
-  font-size: 3.2rem;
+  font-size: 2.6rem;
   font-weight: 900;
   z-index: 2;
 }
 
-.points li::after {
-  content: attr(data-icon);
-  position: absolute;
-  right: 30px;
-  top: 34px;
-  font-size: 3rem;
-  color: var(--accent);
-  filter: grayscale(1) sepia(1) saturate(5) hue-rotate(320deg);
-}
-
-.points li::before {
-  background: #ffffff;
-}
-
 .points strong {
   display: block;
-  color: var(--ink);
-  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  color: #111;
+  font-size: 1.45rem;
   line-height: 1.15;
   margin-bottom: 12px;
   font-weight: 950;
   text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
+
+.points li::after {
+  position: absolute;
+  right: 28px;
+  top: 26px;
+  width: 54px;
+  height: 54px;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* iconcine finte, volutamente ridicole */
+.points li[data-icon="megaphone"]::after { content: "▶"; }
+.points li[data-icon="document"]::after { content: "▤"; }
+.points li[data-icon="book"]::after { content: "▯"; }
+.points li[data-icon="temple"]::after { content: "▥"; }
+.points li[data-icon="handshake"]::after { content: "↔"; }
+.points li[data-icon="piggy"]::after { content: "€"; }
+.points li[data-icon="alert"]::after { content: "!"; }
+.points li[data-icon="brain"]::after { content: "◎"; }
+.points li[data-icon="bulb"]::after { content: "✦"; }
+.points li[data-icon="scale"]::after { content: "⚖"; }
 
 /* TEST */
 
@@ -434,9 +449,13 @@ footer {
     left: 35px;
   }
 
-  .points li {
-    padding-left: 95px;
-  }
+.points li {
+  padding-right: 0;
+}
+
+.points li::after {
+  display: none;
+}
 
   .points li::before {
     width: 70px;

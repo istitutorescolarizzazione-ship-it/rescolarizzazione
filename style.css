@@ -438,6 +438,36 @@ details {
   margin: 6px 0;
 }
 
+.lesson-module {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.lesson-module summary {
+    cursor: pointer;
+    padding: 1rem 1.3rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.lesson-module[open] summary {
+    border-bottom: 1px solid #eee;
+}
+
+.lesson-module > *:not(summary) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.lesson-module blockquote {
+    background: #fff9e8;
+    border-left: 6px solid #e8b400;
+    border-radius: 10px;
+}
+
 /* FAQ */
 
 details {
